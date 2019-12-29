@@ -1,4 +1,4 @@
-# PROSPER SUPPORT FOR DEVICE
+# PROSPER 
 
 App to be custom built for the community
 
@@ -18,18 +18,18 @@ Have a passcode for parties, or guests to avoid unwanted people
 # SUPPORT FOR DEVICE
 
 Mobile
->iOS                                                                                 //flutter, native support swift code provided
->Android                                                                          //flutter, native support kotlin code provided
->Windows mobile (if people actually use it)                    //ever mind
+>iOS                                                                                 flutter, native support swift code provided
+>Android                                                                          flutter, native support kotlin code provided
+>Windows mobile (if people actually use it)                    never mind
 
-Web                                                                               //flutter, wix or html, 
+Web                                                                               flutter, wix or html, 
 
-Google home                                                                //flutter provides an option, but depends
-Alexa                                                                             // have no clue
+Google home                                                                flutter provides an option, but depends
+Alexa                                                                              have no clue
 
 watch
->apple                                                                           // swift, to be coded seperately
->android                                                                        // flutter provides support
+>apple                                                                            swift, to be coded seperately
+>android                                                                         flutter provides support
 
 if you want to setup FLUTTER, 
 
