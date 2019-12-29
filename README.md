@@ -1,4 +1,4 @@
-# PROSPER
+# PROSPER SUPPORT FOR DEVICE
 
 App to be custom built for the community
 
@@ -15,9 +15,24 @@ Pay the maintenance fee and other fee via the app
 Panic alert
 Have a passcode for parties, or guests to avoid unwanted people
 
-SUPPORT FOR DEVICE
-iOS
-Android
-Windows(if people actually use it)
-Web
-Google home
+# SUPPORT FOR DEVICE
+
+Mobile
+>iOS                                                                                 //flutter, native support swift code provided
+>Android                                                                          //flutter, native support kotlin code provided
+>Windows mobile (if people actually use it)                    //ever mind
+
+Web                                                                               //flutter, wix or html, 
+
+Google home                                                                //flutter provides an option, but depends
+Alexa                                                                             // have no clue
+
+watch
+>apple                                                                           // swift, to be coded seperately
+>android                                                                        // flutter provides support
+
+if you want to setup FLUTTER, 
+
+flutter.io 
+
+read the docks, pretty straight foward.
