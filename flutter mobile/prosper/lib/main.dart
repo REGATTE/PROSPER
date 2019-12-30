@@ -1,7 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'login.dart';
-
 void main() {
   runApp(new MaterialApp(
     debugShowCheckedModeBanner: false,
@@ -47,3 +46,4 @@ class _SplashScreenState extends State<SplashScreen> {
     );
   }
 }
+
