@@ -16,6 +16,4 @@ Panic alert
 Have a passcode for parties, or guests to avoid unwanted people
 
 
-# built on flutter
-30/12/2019: built the spach screen and basic layout of the login screen
 
