@@ -9,3 +9,5 @@ dribbble copy
 #5DBCD2. Light blue: P
 #1A2430. Dark navy blue: background
 #white: text, duh!!
+
+cheeku ki choocha
