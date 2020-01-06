@@ -1,12 +1,12 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'login.dart';
+import 'login_page.dart';
 void main() {
   runApp(new MaterialApp(
     debugShowCheckedModeBanner: false,
     home: new SplashScreen(),
     routes: <String, WidgetBuilder>{
-      '/HomeScreen': (BuildContext context) => new Login()
+      '/HomeScreen': (BuildContext context) => new LoginPage()
     },
     theme: ThemeData(
       canvasColor: Color(0xFF1A2430),
