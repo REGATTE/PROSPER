@@ -333,8 +333,7 @@ class _LoginPageState extends State<LoginPage>
                             fontFamily: "WorkSansBold"),
                       ),
                     ),
-                    onPressed: () =>
-                        showInSnackBar("Login button pressed")),
+                    onPressed: (){}),
               ),
             ],
           ),
@@ -571,8 +570,7 @@ class _LoginPageState extends State<LoginPage>
                             fontFamily: "WorkSansBold"),
                       ),
                     ),
-                    onPressed: () =>
-                        showInSnackBar("SignUp button pressed")),
+                    onPressed: (){} ),
               ),
             ],
           ),
@@ -591,7 +589,7 @@ class _LoginPageState extends State<LoginPage>
         duration: Duration(milliseconds: 500), curve: Curves.decelerate);
   }
 
-  void _toggleLogin() {
+void _toggleLogin() {
     setState(() {
       _obscureTextLogin = !_obscureTextLogin;
     });
