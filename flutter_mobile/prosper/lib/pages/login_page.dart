@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'style/theme.dart' as Theme;
-import 'utils/bubble_indication_painter.dart';
+import '../style/theme.dart' as Theme;
+import '../utils/bubble_indication_painter.dart';
+import 'package:prosper/utils/size_config.dart';
 
 class LoginPage extends StatefulWidget {
   LoginPage({Key key}) : super(key: key);
@@ -43,6 +44,7 @@ class _LoginPageState extends State<LoginPage>
 
   @override
   Widget build(BuildContext context) {
+    SizeConfig().init(context);
     return new Scaffold(
       key: _scaffoldKey,
       body: NotificationListener<OverscrollIndicatorNotification>(
@@ -72,8 +74,8 @@ class _LoginPageState extends State<LoginPage>
                     Padding(
                       padding: EdgeInsets.only(top: 75.0),
                       child: new Image(
-                          width: 500.0,
-                          height: 300.0,
+                          width: SizeConfig.safeBlockHorizontal * 85,
+                          height: SizeConfig.safeBlockVertical * 40,
                           fit: BoxFit.fill,
                           image: new AssetImage('images/login_logo.png')),
                     ),
@@ -155,7 +157,7 @@ class _LoginPageState extends State<LoginPage>
       duration: Duration(seconds: 3),
     ));
   }
-
+//menu bar toggle
   Widget _buildMenuBar(BuildContext context) {
     return Container(
       width: 300.0,
@@ -204,7 +206,7 @@ class _LoginPageState extends State<LoginPage>
       ),
     );
   }
-
+//singin
   Widget _buildSignIn(BuildContext context) {
     return Container(
       padding: EdgeInsets.only(top: 23.0),
@@ -377,7 +379,7 @@ class _LoginPageState extends State<LoginPage>
       ),
     );
   }
-
+//signup
   Widget _buildSignUp(BuildContext context) {
     return Container(
       padding: EdgeInsets.only(top: 23.0),
@@ -578,17 +580,17 @@ class _LoginPageState extends State<LoginPage>
       ),
     );
   }
-
+//sign in button
   void _onSignInButtonPress() {
     _pageController.animateToPage(0,
         duration: Duration(milliseconds: 500), curve: Curves.decelerate);
   }
-
+//sign up button
   void _onSignUpButtonPress() {
     _pageController?.animateToPage(1,
         duration: Duration(milliseconds: 500), curve: Curves.decelerate);
   }
-
+//toggle
 void _toggleLogin() {
     setState(() {
       _obscureTextLogin = !_obscureTextLogin;
