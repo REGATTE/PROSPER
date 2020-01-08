@@ -1,12 +1,26 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'pages/login_page.dart';
-void main() {
+import 'pages/home_page.dart';
+import 'Auth/Auth_service.dart';
+
+AuthService appAuth = new AuthService();
+
+Future<void> main() async {
+  // Set default home.
+  Widget _defaultHome = new LoginPage();
+
+  // Get result of the login function.
+  bool _result = await appAuth.login();
+  if (_result) {
+    _defaultHome = new HomePage();
+  }
   runApp(new MaterialApp(
     debugShowCheckedModeBanner: false,
     home: new SplashScreen(),
     routes: <String, WidgetBuilder>{
-      '/HomeScreen': (BuildContext context) => new LoginPage()
+      '/HomeScreen': (BuildContext context) => new LoginPage(),
+      '/login': (BuildContext context) => new LoginPage()
     },
     theme: ThemeData(
       canvasColor: Color(0xFF1A2430),

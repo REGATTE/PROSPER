@@ -4,6 +4,8 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../style/theme.dart' as Theme;
 import '../utils/bubble_indication_painter.dart';
 import 'package:prosper/utils/size_config.dart';
+import 'package:prosper/pages/home_page.dart';
+import 'package:prosper/utils/size_config.dart';
 
 class LoginPage extends StatefulWidget {
   LoginPage({Key key}) : super(key: key);
@@ -75,7 +77,7 @@ class _LoginPageState extends State<LoginPage>
                       padding: EdgeInsets.only(top: 75.0),
                       child: new Image(
                           width: SizeConfig.safeBlockHorizontal * 85,
-                          height: SizeConfig.safeBlockVertical * 40,
+                          height: SizeConfig.safeBlockVertical * 35,
                           fit: BoxFit.fill,
                           image: new AssetImage('images/login_logo.png')),
                     ),
@@ -335,7 +337,12 @@ class _LoginPageState extends State<LoginPage>
                             fontFamily: "WorkSansBold"),
                       ),
                     ),
-                    onPressed: (){}),
+                    onPressed: (){
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(builder: (context) => HomePage()),
+                      );
+                    }),
               ),
             ],
           ),
@@ -381,6 +388,7 @@ class _LoginPageState extends State<LoginPage>
   }
 //signup
   Widget _buildSignUp(BuildContext context) {
+    SizeConfig().init(context);
     return Container(
       padding: EdgeInsets.only(top: 23.0),
       child: Column(
