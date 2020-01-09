@@ -11,10 +11,10 @@ Future<void> main() async {
   Widget _defaultHome = new LoginPage();
 
   // Get result of the login function.
-  bool _result = await appAuth.login();
+ bool _result = await appAuth.login();
   if (_result) {
     _defaultHome = new HomePage();
-  }
+ }
   runApp(new MaterialApp(
     debugShowCheckedModeBanner: false,
     home: new SplashScreen(),

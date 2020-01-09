@@ -20,9 +20,9 @@ class HomePage extends StatelessWidget {
                   'Logout'
               ),
               onPressed: () {
-                appAuth.logout().then(
-                        (_) => Navigator.of(context).pushReplacementNamed('/login')
-                );
+               // appAuth.logout().then(
+                 //       (_) => Navigator.of(context).pushReplacementNamed('/login')
+                //  );
               }
           )
         ],
