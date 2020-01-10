@@ -19,7 +19,7 @@ Future<void> main() async {
     debugShowCheckedModeBanner: false,
     home: new SplashScreen(),
     routes: <String, WidgetBuilder>{
-      '/HomeScreen': (BuildContext context) => new LoginPage(),
+      '/HomeScreen': (BuildContext context) => new HomePage(),
       '/login': (BuildContext context) => new LoginPage()
     },
     theme: ThemeData(
