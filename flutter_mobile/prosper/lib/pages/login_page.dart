@@ -5,7 +5,7 @@ import '../utils/theme.dart' as Theme;
 import '../utils/bubble_indication_painter.dart';
 import 'package:prosper/utils/size_config.dart';
 import 'package:prosper/pages/home_page.dart';
-import 'package:prosper/utils/size_config.dart';
+//import 'package:prosper/utils/size_config.dart';
 
 class LoginPage extends StatefulWidget {
   LoginPage({Key key}) : super(key: key);

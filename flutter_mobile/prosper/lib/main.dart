@@ -1,32 +1,14 @@
 import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'pages/login_page.dart';
-import 'pages/home_page.dart';
-import 'Auth/Auth_service.dart';
 
-AuthService appAuth = new AuthService();
-
-Future<void> main() async {
-  // Set default home.
-  Widget _defaultHome = new LoginPage();
-
-  // Get result of the login function.
- bool _result = await appAuth.login();
-  if (_result) {
-    _defaultHome = new HomePage();
- }
+void main() {
   runApp(new MaterialApp(
-    debugShowCheckedModeBanner: false,
     home: new SplashScreen(),
     routes: <String, WidgetBuilder>{
-      '/HomeScreen': (BuildContext context) => new HomePage(),
-      '/login': (BuildContext context) => new LoginPage()
+      '/HomeScreen': (BuildContext context) => new LoginPage()
     },
-    theme: ThemeData(
-      canvasColor: Color(0xFF1A2430),
-      textTheme: TextTheme(body1: TextStyle(color: Color(0xFFc9a364))),
-      backgroundColor: Color(0xFF1A2430),
-    ),
   ));
 }
 
@@ -37,7 +19,7 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> {
   startTime() async {
-    var _duration = new Duration(seconds: 4);
+    var _duration = new Duration(seconds: 2);
     return new Timer(_duration, navigationPage);
   }
 
@@ -60,4 +42,3 @@ class _SplashScreenState extends State<SplashScreen> {
     );
   }
 }
-
