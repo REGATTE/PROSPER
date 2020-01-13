@@ -1,3 +1,0 @@
-# PROSPER 
-
-meh!
