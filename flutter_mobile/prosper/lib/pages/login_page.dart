@@ -75,8 +75,8 @@ class _LoginPageState extends State<LoginPage>
                     Padding(
                       padding: EdgeInsets.only(top: 75.0),
                       child: new Image(
-                          width: SizeConfig.safeBlockHorizontal * 85,
-                          height: SizeConfig.safeBlockVertical * 35,
+                          width: SizeConfig.safeBlockHorizontal * 60,
+                          height: SizeConfig.safeBlockVertical * 30,
                           fit: BoxFit.fill,
                           image: new AssetImage('images/login_logo.png')),
                     ),
@@ -409,7 +409,7 @@ class _LoginPageState extends State<LoginPage>
                     children: <Widget>[
                       Padding(
                         padding: EdgeInsets.only(
-                            top: 20.0, bottom: 20.0, left: 25.0, right: 25.0),
+                            top: 10.0, bottom: 20.0, left: 25.0, right: 25.0),
                         child: TextField(
                           focusNode: myFocusNodeName,
                           controller: signupNameController,

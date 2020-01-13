@@ -5,6 +5,7 @@ import 'pages/login_page.dart';
 
 void main() {
   runApp(new MaterialApp(
+    debugShowCheckedModeBanner: false,
     home: new SplashScreen(),
     routes: <String, WidgetBuilder>{
       '/HomeScreen': (BuildContext context) => new LoginPage()
@@ -36,6 +37,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
+      backgroundColor: Color(0xFF1B2430),
       body: new Center(
         child: new Image.asset('images/PROSPER_EDIT_1.jpg'),
       ),

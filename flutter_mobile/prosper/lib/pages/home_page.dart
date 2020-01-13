@@ -1,32 +1,42 @@
 import 'package:flutter/material.dart';
-import '../main.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   @override
-  Widget build(BuildContext context) => new Scaffold(
-    appBar: new AppBar(
-      title: new Text('Home'),
-    ),
-    body: new Container(
-      margin: new EdgeInsets.only(
-          top: 50.0
-      ),
-      alignment: Alignment.center,
-      child: new Column(
-        children: <Widget>[
-          new Text('Welcome to App!'),
-          new FlatButton(
-              child: new Text(
-                  'Logout'
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        backgroundColor: Color(0xFF1B2430),
+        body: SafeArea(
+            child: Container(
+          child: Column(
+            children: <Widget>[
+              SizedBox(
+                height: 25,
               ),
-              onPressed: () {
-               // appAuth.logout().then(
-                 //       (_) => Navigator.of(context).pushReplacementNamed('/login')
-                //  );
-              }
-          )
-        ],
-      ),
-    ),
-  );
+              Align(
+                alignment: Alignment.topLeft,
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 20.0),
+                  child: RichText(
+                    text: TextSpan(
+                      children: [
+                        TextSpan( text: 'Hello,',
+                            style: TextStyle(
+                                fontSize: 32,
+                                fontWeight: FontWeight.w700,
+                                color: Color(0xFF5DBCD2))),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+
+            ],
+          ),
+        )));
+  }
 }
