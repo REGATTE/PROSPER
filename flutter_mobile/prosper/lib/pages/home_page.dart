@@ -7,12 +7,12 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> with TickerProviderStateMixin{
 
-  var appColors = [Color.fromRGBO(231, 129, 109, 1.0),Color.fromRGBO(99, 138, 223, 1.0),Color.fromRGBO(111, 194, 173, 1.0)];
+  var appColors = [Color.fromRGBO(27, 36, 48, 1.0),Color.fromRGBO(27, 36, 48, 1.0),Color.fromRGBO(27, 36, 48, 1.0)];
   var cardIndex = 0;
   ScrollController scrollController;
-  var currentColor = Color.fromRGBO(231, 129, 109, 1.0);
+  var currentColor = Color.fromRGBO(27, 36, 48, 1.0);
 
-  var cardsList = [CardItemModel("Personal", Icons.account_circle, 9, 0.83),CardItemModel("Work", Icons.work, 12, 0.24),CardItemModel("Home", Icons.home, 7, 0.32)];
+  var cardsList = [CardItemModel("Personal", Icons.account_circle, 9, 0.83, ),CardItemModel("Work", Icons.work, 12, 0.24),CardItemModel("Home", Icons.home, 7, 0.32)];
 
   AnimationController animationController;
   ColorTween colorTween;
@@ -30,7 +30,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin{
     return new Scaffold(
       backgroundColor: currentColor,
       appBar: new AppBar(
-        title: new Text("TODO", style: TextStyle(fontSize: 16.0),),
+        title: new Text("PROSPER", style: TextStyle(fontSize: 32.0, fontWeight: FontWeight.bold), ),
         backgroundColor: currentColor,
         centerTitle: true,
         actions: <Widget>[
@@ -47,20 +47,20 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin{
           children: <Widget>[
             Row(),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 64.0, vertical: 32.0),
+              padding: const EdgeInsets.symmetric(horizontal: 64.0, vertical: 10.0),
               child: Container(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Padding(
                       padding: const EdgeInsets.symmetric(vertical: 16.0),
-                      child: Icon(Icons.account_circle, size: 45.0, color: Colors.white,),
+                      child: Icon(Icons.account_circle, size: 55.0, color: Color(0xFF5DBCD2),),
                     ),
                     Padding(
-                      padding: const EdgeInsets.fromLTRB(0.0,16.0,0.0,12.0),
-                      child: Text("Hello.", style: TextStyle(fontSize: 30.0, color: Colors.white, fontWeight: FontWeight.w400),),
+                      padding: const EdgeInsets.fromLTRB(0.0,0.0,0.0,12.0),
+                      child: Text("Hello.", style: TextStyle(fontSize: 30.0, color: Color(0xFF5DBCD2), fontWeight: FontWeight.w400),),
                     ),
-                    Text("Looks like feel good.", style: TextStyle(color: Colors.white),),
+                    Text("Looks good, Feel good.", style: TextStyle(color: Colors.white),),
                   ],
                 ),
               ),
@@ -68,10 +68,6 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin{
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 64.0, vertical: 16.0),
-                  child: Text("TODAY : JUL 21, 2018", style: TextStyle(color: Colors.white),),
-                ),
                 Container(
                   height: 350.0,
                   child: ListView.builder(
@@ -107,7 +103,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin{
                                       children: <Widget>[
                                         Padding(
                                           padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 4.0),
-                                          child: Text("${cardsList[position].tasksRemaining} Tasks", style: TextStyle(color: Colors.grey),),
+                                          //child: Text("${cardsList[position].tasksRemaining} Tasks", style: TextStyle(color: Colors.grey),),
                                         ),
                                         Padding(
                                           padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 4.0),
@@ -168,7 +164,12 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin{
           ],
         ),
       ),
-      drawer: Drawer(),
+      drawer: Drawer(
+          child: Container(color: Color(0xFF5DBCD2),
+              child: new ListView(
+              )
+          )
+      ),
     );
   }
 }
