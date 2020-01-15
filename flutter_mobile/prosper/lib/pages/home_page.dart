@@ -87,7 +87,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                       ),
                     ),
                     Text(
-                      "Looks good, Feel good.",
+                      "Looks good, Feels good.",
                       style: TextStyle(color: Colors.white),
                     ),
                   ],
@@ -96,7 +96,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
             ),
 
             //slider list: ICON CARDS
-            /*Column(
+            Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Container(
@@ -215,7 +215,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                   ),
                 ),
               ],
-            )*/
+            )
             Row(
 
             ),
