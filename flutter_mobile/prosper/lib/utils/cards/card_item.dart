@@ -9,4 +9,5 @@ class CardItemModel {
 
   CardItemModel(this.cardTitle, this.icon, this.tasksRemaining, this.taskCompletion);
 
+
 }

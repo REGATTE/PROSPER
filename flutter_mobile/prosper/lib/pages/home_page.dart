@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:prosper/utils/card_item.dart';
+import 'package:prosper/utils/cards/card_item.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -216,9 +216,6 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                 ),
               ],
             )
-            Row(
-
-            ),
           ],
         ),
       ),
