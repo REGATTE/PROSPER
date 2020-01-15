@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:prosper/utils/cards/card_item.dart';
+import 'package:prosper/utils/cards_v1/card_item.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -69,14 +69,6 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 16.0),
-                      child: Icon(
-                        Icons.account_circle,
-                        size: 55.0,
-                        color: Color(0xFF5DBCD2),
-                      ),
-                    ),
-                    Padding(
                       padding: const EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 12.0),
                       child: Text(
                         "Hello.",
@@ -96,7 +88,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
             ),
 
             //slider list: ICON CARDS
-            Column(
+            /*Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Container(
@@ -215,7 +207,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                   ),
                 ),
               ],
-            )
+            )*/
           ],
         ),
       ),

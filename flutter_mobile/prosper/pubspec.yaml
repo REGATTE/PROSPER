@@ -80,5 +80,11 @@ flutter:
     - family: WorkSansMedium
       fonts:
         - asset: fonts/Work_Sans/WorkSans-Medium.ttf
+
+    - family: Raleway
+      fonts:
+        - asset: fonts/Raleway-Regular.ttf
+        - asset: fonts/Raleway-Thin.ttf
+            
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
