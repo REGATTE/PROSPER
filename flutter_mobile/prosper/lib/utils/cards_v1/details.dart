@@ -1,4 +1,4 @@
-import 'package:prosper/utils/cards/card_item.dart';
+import 'package:prosper/utils/cards_v1/card_item.dart';
 import 'package:flutter/material.dart';
 
 class DetailPage extends StatelessWidget {
