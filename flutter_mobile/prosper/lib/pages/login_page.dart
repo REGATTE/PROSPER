@@ -1,8 +1,17 @@
+/*
+CODE WRITTEN BY ASHOK KUMAR
+GITHUB: REGATTE
+THE WHOLE CODE HAS CODE WRITTEN SUCH THAT THE SCREEN SIZE CHANGES ACCORDIGLY TO THE DEVICE
+COMMENTS ARE GIVEN FOR IMAGES AND FOR AUTHENTICATION POINTS
+WILL EXPLAIN ALL THE WIDGETS IN COURSE OF THE BUILD
+
+LOL THIS IS A PRIVATE REPO AND STILL ALL THE COMMENTING
+
+GUYS BE HAPPY, WHOEVER IM SELLING THIS BUILD TO
+*/
 import "package:flutter/material.dart";
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:prosper/Widgets/CustomIcons.dart';
 import 'package:prosper/Widgets/FormCard.dart';
-import 'package:prosper/Widgets/SocialIcon.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -61,6 +70,7 @@ class _LoginPageState extends State<LoginPage> {
             Column(
               crossAxisAlignment: CrossAxisAlignment.end,
               children: <Widget>[
+//THE TOP IMAGE OF TWO PEOPLE
                 Padding(
                     padding: EdgeInsets.only(top: 20.0),
                     child: Image.asset('images/login_logo_2.png')
@@ -68,6 +78,7 @@ class _LoginPageState extends State<LoginPage> {
                 Expanded(
                   child: Container(),
                 ),
+//THE BOTTOM BUILDINGS SCENARIO
                 Image.asset('images/buildings.png'),
               ],
             ),
@@ -76,6 +87,7 @@ class _LoginPageState extends State<LoginPage> {
                     padding: EdgeInsets.only(left: 28.0, right: 28.0, top: 60.0),
                     child: Column(
                       children: <Widget>[
+//THE LOGO BESIDE THE TWO HUMANS ON TOP
                         Row(
                           children: <Widget>[
                             Image.asset(
@@ -83,19 +95,10 @@ class _LoginPageState extends State<LoginPage> {
                               width: ScreenUtil.getInstance().setWidth(110),
                               height: ScreenUtil.getInstance().setHeight(110),
                             ),
-                            Text(
-                                'LOGO',
-                                style: TextStyle(
-                                  fontFamily: 'Poppins-Bold',
-                                  fontSize: ScreenUtil.getInstance().setSp(46),
-                                  letterSpacing: .6,
-                                  fontWeight: FontWeight.bold,
-                                )
-                            )
                           ],
                         ),
                         SizedBox(
-                          height: ScreenUtil.getInstance().setHeight(180),
+                          height: ScreenUtil.getInstance().setHeight(220),
                         ),
                         FormCard(),
                         SizedBox(
@@ -109,6 +112,7 @@ class _LoginPageState extends State<LoginPage> {
                                 SizedBox(
                                   width: ScreenUtil.getInstance().setWidth(12.0),
                                 ),
+//RADIO BOX FOR REMEMBER EM
                                 GestureDetector(
                                   onTap: _radio,
                                   child: radioButton(_isSelected),
@@ -116,18 +120,21 @@ class _LoginPageState extends State<LoginPage> {
                                 SizedBox(
                                   width: ScreenUtil.getInstance().setWidth(8.0),
                                 ),
+//REMEMBER ME
                                 Text(
                                     'Remember me',
                                     style: TextStyle(
-                                      fontSize: 12.0, fontFamily: 'Poppins-Medium',
+                                      fontSize: 12.0, fontFamily: 'Poppins-Medium', color: Colors.white
                                     )
                                 ),
                               ],
                             ),
+// BUTTON FOR SIGN IN
                             InkWell(
                               child: Container(
                                   width: ScreenUtil.getInstance().setWidth(300),
                                   height: ScreenUtil.getInstance().setHeight(100),
+//GRADIENT ON THE BUTTON
                                   decoration: BoxDecoration(
                                     gradient: LinearGradient(
                                         colors: [Color(0xFF17ead9), Color(0xFF6078ea)]
@@ -165,85 +172,7 @@ class _LoginPageState extends State<LoginPage> {
                         SizedBox(
                           height: ScreenUtil.getInstance().setHeight(40),
                         ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: <Widget>[
-                            horizontalLine(),
-                            Text(
-                                'Social Login',
-                                style: TextStyle(
-                                  fontSize: 16.0,
-                                  fontFamily: 'Poppins-Medium',
-                                )
-                            ),
-                            horizontalLine(),
-                          ],
-                        ),
-                        SizedBox(
-                          height: ScreenUtil.getInstance().setHeight(40),
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: <Widget>[
-                            SocialIcon(
-                              colors: [
-                                Color(0xFF102397),
-                                Color(0xFF187adf),
-                                Color(0xFF00eaf8),
-                              ],
-                              icondata: CustomIcons.facebook,
-                              onPressed: () {},
-                            ),
-                            SocialIcon(
-                              colors: [
-                                Color(0xFFff4f38),
-                                Color(0xFFff355d),
-                              ],
-                              icondata: CustomIcons.googlePlus,
-                              onPressed: () {},
-                            ),
-                            SocialIcon(
-                              colors: [
-                                Color(0xFF17ead9),
-                                Color(0xFF6078ea),
-                              ],
-                              icondata: CustomIcons.twitter,
-                              onPressed: () {},
-                            ),
-                            SocialIcon(
-                              colors: [
-                                Color(0xFF00c6fb),
-                                Color(0xFF005bea),
-                              ],
-                              icondata: CustomIcons.linkedin,
-                              onPressed: () {},
-                            ),
-                          ],
-                        ),
-                        SizedBox(
-                          height: ScreenUtil.getInstance().setHeight(30),
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: <Widget>[
-                            Text(
-                              'New User? ',
-                              style: TextStyle(
-                                  fontFamily: 'Poppins-Medium'
-                              ),
-                            ),
-                            InkWell(
-                              onTap: () {},
-                              child: Text(
-                                  'SignUp',
-                                  style: TextStyle(
-                                    fontFamily: 'Poppins-Bold',
-                                    color: Color(0xFF5d74e3),
-                                  )
-                              ),
-                            )
-                          ],
-                        )
+
                       ],
                     )
                 )
