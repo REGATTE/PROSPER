@@ -63,7 +63,7 @@ class _SplashScreenState extends State<SplashScreen> {
     return new Scaffold(
       backgroundColor: Color(0xFF1B2430),
       body: new Center(
-        child: new Image.asset('images/PROSPER_EDIT_1.jpg'),
+        child: new Image.asset('assets/images/PROSPER_EDIT_1.jpg'),
       ),
     );
   }

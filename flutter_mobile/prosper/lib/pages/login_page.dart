@@ -11,7 +11,8 @@ GUYS BE HAPPY, WHOEVER IM SELLING THIS BUILD TO
 */
 import "package:flutter/material.dart";
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:prosper/Widgets/FormCard.dart';
+import 'package:prosper/Widgets/widgets_for_login/FormCard.dart';
+import 'package:prosper/pages/homepage.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -46,6 +47,7 @@ class _LoginPageState extends State<LoginPage> {
         : Container(),
   );
 
+// CODE TO CHANGE THE SCREEN SIZE ACCORDINGLY
   Widget horizontalLine() => Padding(
     padding: EdgeInsets.symmetric(horizontal: 16.0),
     child: Container(
@@ -55,8 +57,7 @@ class _LoginPageState extends State<LoginPage> {
     ),
   );
 
-
-
+//build instance
   @override
   Widget build(BuildContext context) {
     ScreenUtil.instance = ScreenUtil(width: 750, height: 1334, allowFontScaling: true)..init(context);
@@ -73,13 +74,13 @@ class _LoginPageState extends State<LoginPage> {
 //THE TOP IMAGE OF TWO PEOPLE
                 Padding(
                     padding: EdgeInsets.only(top: 20.0),
-                    child: Image.asset('images/login_logo_2.png')
+                    child: Image.asset('assets/images/login_logo_2.png')
                 ),
                 Expanded(
                   child: Container(),
                 ),
 //THE BOTTOM BUILDINGS SCENARIO
-                Image.asset('images/buildings.png'),
+                Image.asset('assets/images/buildings.png'),
               ],
             ),
             SingleChildScrollView(
@@ -91,16 +92,19 @@ class _LoginPageState extends State<LoginPage> {
                         Row(
                           children: <Widget>[
                             Image.asset(
-                              'images/logo.png',
+                              'assets/images/logo.png',
                               width: ScreenUtil.getInstance().setWidth(110),
                               height: ScreenUtil.getInstance().setHeight(110),
                             ),
                           ],
                         ),
+//SPACER
                         SizedBox(
-                          height: ScreenUtil.getInstance().setHeight(220),
+                          height: ScreenUtil.getInstance().setHeight(300),
                         ),
+//THE LOGIN FORM BOX
                         FormCard(),
+//SPACER
                         SizedBox(
                           height: ScreenUtil.getInstance().setHeight(35),
                         ),
@@ -109,6 +113,7 @@ class _LoginPageState extends State<LoginPage> {
                           children: <Widget>[
                             Row(
                               children: <Widget>[
+//SPACER
                                 SizedBox(
                                   width: ScreenUtil.getInstance().setWidth(12.0),
                                 ),
@@ -117,6 +122,7 @@ class _LoginPageState extends State<LoginPage> {
                                   onTap: _radio,
                                   child: radioButton(_isSelected),
                                 ),
+//SPACER
                                 SizedBox(
                                   width: ScreenUtil.getInstance().setWidth(8.0),
                                 ),
@@ -148,10 +154,13 @@ class _LoginPageState extends State<LoginPage> {
                                       )
                                     ],
                                   ),
+//SIGN IN BUTTON PRESS NAVIGATOR
                                   child: Material(
                                       color: Colors.transparent,
                                       child: InkWell(
-                                          onTap: () {},
+                                          onTap: () {
+                                          Navigator.pushReplacement(context,MaterialPageRoute(builder: (context) => HomePage()),); //pushReplacement wont go back to the prev page
+                                          },
                                           child: Center(
                                               child: Text(
                                                   'SIGNIN',
@@ -169,6 +178,7 @@ class _LoginPageState extends State<LoginPage> {
                             )
                           ],
                         ),
+//SPACER
                         SizedBox(
                           height: ScreenUtil.getInstance().setHeight(40),
                         ),

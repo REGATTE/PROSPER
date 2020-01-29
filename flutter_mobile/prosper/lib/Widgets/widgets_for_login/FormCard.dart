@@ -6,7 +6,7 @@ class FormCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      height: ScreenUtil.getInstance().setHeight(500),
+      height: ScreenUtil.getInstance().setHeight(450),//setHeight is the height of the box
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(8.0),
@@ -23,8 +23,9 @@ class FormCard extends StatelessWidget {
           ),
         ],
       ),
+
       child: Padding(
-        padding: EdgeInsets.only(left: 16.0, top: 16.0, right: 16.0),
+        padding: EdgeInsets.only(left: 16.0, top: 10.0, right: 16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
@@ -36,24 +37,26 @@ class FormCard extends StatelessWidget {
                 letterSpacing: .6,
               )
             ),
+//SPACER BETWEEN LOGIN AND MOBILE NUMBER
             SizedBox(
               height: ScreenUtil.getInstance().setHeight(30),
             ),
             Text(
-              'Username',
+              'mobile number',
               style: TextStyle(
                 fontFamily: 'Poppins-Medium',
-                fontSize: ScreenUtil.getInstance().setSp(26),
+                fontSize: ScreenUtil.getInstance().setSp(26),//setSp is the FONT SIZE
               )
             ),
             TextField(
               decoration: InputDecoration(
-                hintText: 'username',
+                hintText: 'mobile number',
                 hintStyle: TextStyle(color: Colors.grey, fontSize: 12.0 )
               ),
             ),
+//SPACER BETWEEN MOBILE NUMBER AND PASSWORD
             SizedBox(
-              height: ScreenUtil.getInstance().setHeight(30),
+              height: ScreenUtil.getInstance().setHeight(25),
             ),
             Text(
               'Password',
@@ -70,7 +73,7 @@ class FormCard extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: ScreenUtil.getInstance().setHeight(35),
+              height: ScreenUtil.getInstance().setHeight(30),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
