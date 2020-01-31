@@ -1,6 +1,7 @@
-# prosper
+# PROSPER
 
-A new Flutter application.
+DEVELOPED BY ASHOK
+https://github.com/Regatte
 
 ## Getting Started
 
