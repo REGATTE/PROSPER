@@ -1,4 +1,5 @@
 # PROSPER 
+# PUT ON HOLD, AS THERE ARE SOME INTERNAL DISCREPENCIES!
 
 App to be custom built for the community
 
